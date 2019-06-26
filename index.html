@@ -7,11 +7,92 @@
         <meta name="Social Media Survey" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text.css" href="style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <main>
-            
+        <main class="container">
+            <header>
+                <div class="row justify-content-center">
+                    <h1 class="text-center">Social Media Survey Form</h1>
+                </div>
+            </header>
+            <form>
+                <div class="row form-group">
+                    <label for="name" class="col text-right">* Name</label>
+                    <div class="col">
+                        <input type="text" class="form-control" id="name" placeholder="Enter name">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="email" class="col text-right">* Email address</label>
+                    <div class="col">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="age" class="col text-right">* Age</label>
+                    <div class="col">
+                        <input type="number" class="form-control" id="age" placeholder="Enter age">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="currentRole" class="col text-right">Which option best describes your current role?</label>
+                    <div class="col">
+                        <select id="currentRole" class="form-control">
+                            <option>Student</option>
+                            <option>Full-Time Job</option>
+                            <option>Prefer not to say</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="favouriteSocialMedia" class="col text-right">What is your favourite social media platform?</label>
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="faceBook">
+                            <label class="form-check-label" for="faceBook">
+                            Facebook
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="instagram">
+                            <label class="form-check-label" for="instagram">
+                            Instagram
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="snapchat">
+                            <label class="form-check-label" for="snapchat">
+                            Snapchat
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="reddit">
+                            <label class="form-check-label" for="reddit">
+                            Reddit
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="tumblr">
+                            <label class="form-check-label" for="tumblr">
+                            Tumblr
+                            </label>
+                        </div>
+                        <small id="emailHelp" class="form-text text-muted">Other? Please type the platform below</small>
+                        <input type="text" class="form-control" id="name" placeholder="eg. Pintrest">
+                    </div>
+                </div>
+            </form>
+            <footer>
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col">
+                        <button type="button" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                </div>
+            </footer>
         </main>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </body>
