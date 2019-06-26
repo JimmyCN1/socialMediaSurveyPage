@@ -7,10 +7,6 @@ form {
     background-color: #FFFFFF;
 }
 
-input {
-    /* display: inline-block !important; */
-}
-
 .btn-primary {
     background-color: #6A6262 !important;
     border-color: #6A6262 !important;
@@ -21,7 +17,6 @@ input {
         text-align: right;
     }
     col-sm {
-        /* text-align: right !important; */
         display: flex;
         justify-content: flex-start;
     }
