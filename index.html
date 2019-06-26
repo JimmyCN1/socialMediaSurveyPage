@@ -13,85 +13,117 @@
         <main class="container">
             <header>
                 <div class="row justify-content-center">
-                    <h1 class="text-center">Social Media Survey Form</h1>
+                    <h1 id="title" class="text-center">Social Media Survey Form</h1>
                 </div>
             </header>
-            <form>
+            <div class="row justify-content-center">
+                <p id="description">Let us know a little bit more about your social media habits</p>
+            </div>
+            <form id="survey-form">
                 <div class="row form-group">
-                    <label for="name" class="col text-right">* Name</label>
-                    <div class="col">
-                        <input type="text" class="form-control" id="name" placeholder="Enter name">
+                    <label for="name" class="col-sm" id="name-label">* Name</label>
+                    <div class="col-sm">
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" required>
                     </div>
                 </div>
                 <div class="row form-group">
-                    <label for="email" class="col text-right">* Email address</label>
-                    <div class="col">
-                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    <label for="email" class="col-sm" id="email-label">* Email address</label>
+                    <div class="col-sm">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                 </div>
                 <div class="row form-group">
-                    <label for="age" class="col text-right">* Age</label>
-                    <div class="col">
-                        <input type="number" class="form-control" id="age" placeholder="Enter age">
+                    <label for="number" class="col-sm" id="number-label">* Age</label>
+                    <div class="col-sm">
+                        <input type="number" class="form-control" id="number" min="10" max="120" placeholder="Enter age" required>
                     </div>
                 </div>
                 <div class="row form-group">
-                    <label for="currentRole" class="col text-right">Which option best describes your current role?</label>
-                    <div class="col">
-                        <select id="currentRole" class="form-control">
-                            <option>Student</option>
-                            <option>Full-Time Job</option>
-                            <option>Prefer not to say</option>
-                            <option>Other</option>
+                    <label for="dropdown" class="col-sm">Which option best describes your current role?</label>
+                    <div class="col-sm">
+                        <select id="dropdown" class="form-control">
+                            <option name="role">Student</option>
+                            <option name="role">Full-Time Job</option>
+                            <option name="role">Prefer not to say</option>
+                            <option name="role">Other</option>
                         </select>
                     </div>
                 </div>
                 <div class="row form-group">
-                    <label for="favouriteSocialMedia" class="col text-right">What is your favourite social media platform?</label>
-                    <div class="col">
+                    <label for="facebook" class="col-sm">* What are your favourite social media platforms?</label>
+                    <div class="col-sm">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="faceBook">
-                            <label class="form-check-label" for="faceBook">
+                            <input class="form-check-input" type="checkbox" id="faceBook" name="platform" value="facebook">
+                            <label class="form-check-label" for="facebook">
                             Facebook
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="instagram">
+                            <input class="form-check-input" type="checkbox" id="instagram" name="platform" value="instagram">
                             <label class="form-check-label" for="instagram">
                             Instagram
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="snapchat">
+                            <input class="form-check-input" type="checkbox" id="snapchat" name="platform" value="snapchat">
                             <label class="form-check-label" for="snapchat">
                             Snapchat
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="reddit">
+                            <input class="form-check-input" type="checkbox" id="reddit" name="platform" value="reddit">
                             <label class="form-check-label" for="reddit">
                             Reddit
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="tumblr">
+                            <input class="form-check-input" type="checkbox" id="tumblr" name="platform" value="tumblr">
                             <label class="form-check-label" for="tumblr">
                             Tumblr
                             </label>
                         </div>
                         <small id="emailHelp" class="form-text text-muted">Other? Please type the platform below</small>
-                        <input type="text" class="form-control" id="name" placeholder="eg. Pintrest">
+                        <input type="text" class="form-control" id="name" placeholder="eg. Pintrest" name="platform">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="favouriteSocialMedia" class="col-sm">How likely are you to change social media platform?</label>
+                    <div class="col-sm">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="veryLikely" name="favouriteSocialMedia" value="veryLikely">
+                            <label class="form-check-label" for="veryLikely">
+                            Very likely
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="notSure" name="favouriteSocialMedia" value="notSure">
+                            <label class="form-check-label" for="notSure">
+                            Not sure
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="notLikely" name="favouriteSocialMedia" value="notLikely">
+                            <label class="form-check-label" for="notLikely">
+                            Not very likely
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="comments" class="col-sm">Please describe your favourite features of your social media platform of choice</label>
+                    <div class="col-sm">
+                        <textarea class="form-control" id="comments" placeholder="Enter your comments here"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
                     </div>
                 </div>
             </form>
             <footer>
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary btn-lg">Submit</button>
-                    </div>
-                </div>
             </footer>
         </main>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

@@ -1,7 +1,28 @@
-form-group {
-    /* display: flex; */
+body {
+    background-color: #CFD2B2;
+}
+
+form {
+    padding: 2rem;
+    background-color: #FFFFFF;
 }
 
 input {
     /* display: inline-block !important; */
+}
+
+.btn-primary {
+    background-color: #6A6262 !important;
+    border-color: #6A6262 !important;
+}
+
+@media (min-width: 576px) {
+    label {
+        text-align: right;
+    }
+    col-sm {
+        /* text-align: right !important; */
+        display: flex;
+        justify-content: flex-start;
+    }
 }
